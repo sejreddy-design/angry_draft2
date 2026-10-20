@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f3">
+  <title>Sports > Me? Explain. 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Back to top">♡ Why Sports?</a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#case-file">The case</a><a href="#questions">Questions</a><a href="#love-letter">Love letter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero paper" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A very serious girlfriend investigation</p>
+        <h1>Sports <span>&gt;</span> Me? <span class="face">ಠ_ಠ</span></h1>
+        <p class="lead">Congrats, babe. You chose sports over me. <em>Again.</em> 🥲</p>
+        <div class="pink-swipe">At least be honest… do you even remember I exist?</div>
+        <p class="small-note">(I’m fine. Totally fine. Just dramatically collecting evidence.) 💗</p>
+      </div>
+      <div class="hero-photo-wrap">
+        <span class="sticker sticker-top">ANGRY GF MODE</span>
+        <img class="hero-photo" src="assets/angry-girlfriend.jpg" alt="Your funny angry photo goes here"
+          onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+        <div class="photo-placeholder" hidden>
+          <span class="placeholder-emoji">😤</span>
+          <strong>Your angry photo goes here</strong>
+          <small>Save your picture as <code>angry-girlfriend.jpg</code> inside the assets folder.</small>
+        </div>
+        <span class="sticker sticker-bottom">WANTED: ATTENTION</span>
+      </div>
+      <aside class="sticky-note">Sports are temporary…<br><strong>my love is forever.</strong> ♡</aside>
+    </section>
+
+    <section class="section case-section" id="case-file">
+      <div class="section-heading">
+        <p class="eyebrow">Case file no. 001</p>
+        <h2>The Girlfriend Investigation 💌</h2>
+        <p>Three simple stages. One very guilty boyfriend. Please proceed with caution.</p>
+      </div>
+      <div class="case-list">
+        <article class="case-step">
+          <img src="assets/official-complaint.png" alt="Cartoon angry girlfriend making a complaint">
+          <div class="case-copy">
+            <p class="case-number">01 — The official complaint</p>
+            <p class="case-quote">“Dear Mr. Boyfriend, your girlfriend would like to know why a ball has been given priority over her.”</p>
+            <p>Your angry photo will be the main evidence.</p>
+          </div>
+        </article>
+        <article class="case-step">
+          <img src="assets/interrogation-room.png" alt="Cartoon boyfriend nervously answering questions">
+          <div class="case-copy">
+            <p class="case-number">02 — The interrogation room</p>
+            <p>Questions like “Who is more important: me or sports?”, “How many kisses are you fined for this crime?” and “Do you plead guilty?”</p>
+          </div>
+        </article>
+        <article class="case-step">
+          <img src="assets/boyfriend-punishment.png" alt="Cute cartoon couple hugging with hearts">
+          <div class="case-copy">
+            <p class="case-number">03 — The boyfriend's punishment</p>
+            <p>He gets a funny verdict, a fake fine payable in hugs and kisses, and a sweet message from you at the end.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section questions-section" id="questions">
+      <div class="section-heading">
+        <p class="eyebrow">Answer carefully, sir</p>
+        <h2>Important Questions 📝</h2>
+        <p>Please answer honestly… or face girlfriend consequences.</p>
+      </div>
+      <form id="quiz" class="quiz-grid">
+        <fieldset class="question-card pink-card">
+          <legend>01. Who is more important?</legend>
+          <label><input type="radio" name="q1" value="Sports"> A) Sports</label>
+          <label><input type="radio" name="q1" value="You, obviously" required> B) Me, obviously</label>
+          <label><input type="radio" name="q1" value="Both"> C) Both (suspicious answer)</label>
+        </fieldset>
+        <fieldset class="question-card lilac-card">
+          <legend>02. How many kisses are you fined?</legend>
+          <label><input type="radio" name="q2" value="5 kisses" required> A) 5 kisses</label>
+          <label><input type="radio" name="q2" value="20 kisses"> B) 20 kisses</label>
+          <label><input type="radio" name="q2" value="Unlimited kisses"> C) Unlimited, your honour</label>
+        </fieldset>
+        <fieldset class="question-card blue-card">
+          <legend>03. Do you miss me at sports?</legend>
+          <label><input type="radio" name="q3" value="Yes" required> A) Yes 🥺</label>
+          <label><input type="radio" name="q3" value="Obviously"> B) Obviously</label>
+          <label><input type="radio" name="q3" value="I miss you more"> C) I miss you more than the game</label>
+        </fieldset>
+        <fieldset class="question-card green-card">
+          <legend>04. How will you make it up to me?</legend>
+          <label><input type="radio" name="q4" value="Date"> A) A date</label>
+          <label><input type="radio" name="q4" value="Food"> B) Food and attention</label>
+          <label><input type="radio" name="q4" value="All"> C) All of the above, immediately</label>
+        </fieldset>
+        <button class="submit-button" type="submit">Submit your confession 💌</button>
+      </form>
+      <div id="verdict" class="verdict" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="love-letter paper" id="love-letter">
+      <div class="letter-doodle">♡</div>
+      <p class="eyebrow">Despite the allegations…</p>
+      <h2>Fine. I still love you. 🙄💗</h2>
+      <p>No matter how much you love sports, just remember that your girlfriend loves you more.</p>
+      <p class="small-note">(I am still mad. Your sentence is one hug, two kisses, and quality time with me.)</p>
+      <button id="loveButton" class="love-button" type="button">Tap for your final warning 💘</button>
+      <p id="loveReveal" class="love-reveal" hidden>Final warning: come back soon, give me a cuddle, and tell me I’m your favourite person. Case closed. 💋</p>
+    </section>
+  </main>
+
+  <footer>Made with love, drama, and 3% patience. © Your Girlfriend 💗</footer>
+  <script src="script.js"></script>
+</body>
+</html>
