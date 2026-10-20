@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap');
+
+:root {
+  --ink: #29202a;
+  --pink: #ffdce5;
+  --paper: #fffaf6;
+  --rose: #f49ab2;
+  --line: #f0dfe1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--ink); background: #fff7f5;
+  font-family: "DM Sans", system-ui, sans-serif; line-height: 1.55;
+}
+a { color: inherit; }
+.topbar {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center;
+  justify-content: space-between; gap: 18px; padding: 13px clamp(16px, 4vw, 54px);
+  background: rgba(255,250,246,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px);
+}
+.brand, nav a { font-family: "Patrick Hand", cursive; text-decoration: none; }
+.brand { font-size: 1.45rem; font-weight: bold; white-space: nowrap; }
+nav { display: flex; gap: clamp(10px, 2.5vw, 30px); flex-wrap: wrap; justify-content: flex-end; }
+nav a { font-size: 1.1rem; }
+nav a:hover { color: #d74e7c; }
+.paper { background-color: var(--paper); background-image: radial-gradient(#f3dce0 0.7px, transparent 0.7px); background-size: 15px 15px; }
+.hero {
+  min-height: 490px; display: grid; grid-template-columns: 1.1fr .9fr .45fr;
+  gap: 25px; align-items: center; padding: clamp(30px, 6vw, 76px);
+  border-bottom: 1px solid var(--line);
+}
+.hero-copy h1 { font: 700 clamp(2.5rem, 5.5vw, 5.2rem)/.98 "Patrick Hand", cursive; margin: 10px 0 22px; }
+.hero-copy h1 span { color: #df6e92; }
+.face { white-space: nowrap; }
+.eyebrow { text-transform: uppercase; letter-spacing: .13em; font-size: .74rem; font-weight: 700; color: #b94e70; }
+.lead { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+.pink-swipe { display: inline-block; background: #ffd5e0; padding: 13px 18px; transform: rotate(-1deg); font: 1.35rem "Patrick Hand", cursive; }
+.small-note { font-size: .92rem; color: #66515c; }
+.hero-photo-wrap { position: relative; text-align: center; }
+.hero-photo { width: 100%; max-width: 360px; max-height: 390px; object-fit: cover; border: 8px solid white; border-radius: 8px; box-shadow: 0 8px 25px #58303b25; transform: rotate(2deg); }
+.photo-placeholder { min-height: 260px; max-width: 360px; margin: auto; padding: 28px; display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center; border: 3px dashed #e9a4b7; border-radius: 12px; background: #fff0f4; }
+.placeholder-emoji { font-size: 4rem; }
+.photo-placeholder small { max-width: 260px; }
+.sticker { position: absolute; z-index: 1; background: #ffdf7d; padding: 7px 10px; border: 2px solid white; box-shadow: 0 3px 8px #3332; font: 1rem "Patrick Hand", cursive; }
+.sticker-top { top: -15px; left: -10px; transform: rotate(-8deg); }
+.sticker-bottom { bottom: -12px; right: -6px; transform: rotate(5deg); }
+.sticky-note { background: #ffe4eb; padding: 22px 16px; text-align: center; transform: rotate(4deg); box-shadow: 0 7px 15px #55313c18; font: 1.25rem "Patrick Hand", cursive; }
+.section { padding: 55px clamp(18px, 5vw, 68px); }
+.section-heading { margin-bottom: 25px; }
+.section-heading h2, .love-letter h2 { font: 700 clamp(2rem, 4vw, 3rem)/1.1 "Patrick Hand", cursive; margin: 0; }
+.section-heading p { margin: 5px 0; }
+.evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.polaroid { padding: 12px 12px 6px; background: white; border: 1px solid #f0e2e2; box-shadow: 0 4px 13px #52353d12; }
+.tilt-left { transform: rotate(-1.4deg); } .tilt-right { transform: rotate(1.7deg); }
+.polaroid img { width: 100%; height: 220px; object-fit: cover; display: block; background: #fff0f4; }
+.polaroid p { font: 1.1rem "Patrick Hand", cursive; }
+.image-placeholder { min-height: 170px; display: grid; place-items: center; text-align: center; background: #fff0f4; color: #8b5b6a; padding: 20px; }
+.caption { color: #7b6670; font-size: .9rem; }
+.questions-section { background: linear-gradient(140deg, #fff0f4, #fff8f1); }
+.quiz-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.question-card { border: 0; border-radius: 18px; padding: 20px; min-width: 0; }
+.question-card legend { font: 1.3rem "Patrick Hand", cursive; font-weight: bold; padding: 0 0 8px; }
+.question-card label { display: block; margin: 8px 0; cursor: pointer; }
+.question-card input { accent-color: #d94f7a; margin-right: 8px; }
+.pink-card { background: #ffe0e8; } .lilac-card { background: #eee3fb; }
+.blue-card { background: #deefff; } .green-card { background: #e2f4e5; }
+.submit-button, .love-button { border: 0; border-radius: 999px; padding: 14px 22px; background: #d94f7a; color: white; font: 1.15rem "Patrick Hand", cursive; cursor: pointer; box-shadow: 0 5px 0 #a93b5e; transition: transform .15s; }
+.submit-button:hover, .love-button:hover { transform: translateY(-2px); }
+.submit-button:active, .love-button:active { transform: translateY(2px); box-shadow: 0 2px 0 #a93b5e; }
+.verdict { margin-top: 20px; padding: 20px; border: 2px dashed #d94f7a; border-radius: 16px; background: white; font: 1.3rem "Patrick Hand", cursive; }
+.love-letter { text-align: center; padding: 60px 20px; }
+.love-letter > p:not(.eyebrow) { max-width: 620px; margin: 15px auto; }
+.letter-doodle { font-size: 2.5rem; color: #d94f7a; }
+.love-reveal { padding: 18px; background: #ffe0e8; border-radius: 16px; font: 1.3rem "Patrick Hand", cursive; }
+footer { padding: 22px; text-align: center; background: #ffedf1; font-size: .85rem; }
+[hidden] { display: none !important; }
+
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr 1fr; padding: 34px 24px; }
+  .sticky-note { grid-column: 1 / -1; max-width: 280px; justify-self: center; }
+  .evidence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .topbar { align-items: flex-start; flex-direction: column; gap: 7px; }
+  nav { justify-content: flex-start; gap: 7px 16px; }
+  nav a { font-size: 1rem; }
+  .hero { grid-template-columns: 1fr; gap: 26px; padding: 30px 20px; }
+  .hero-copy h1 { font-size: 3.2rem; }
+  .hero-photo-wrap { width: min(100%, 350px); margin: auto; }
+  .sticky-note { grid-column: auto; }
+  .section { padding: 38px 18px; }
+  .evidence-grid, .quiz-grid { grid-template-columns: 1fr; gap: 18px; }
+  .polaroid img { height: 240px; }
+  .question-card { padding: 18px; }
+}
+
+/* Structured three-step girlfriend case file */
+.case-section { max-width: 1160px; margin: 0 auto; }
+.case-list { display: flex; flex-direction: column; }
+.case-step {
+  display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: center;
+  gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line);
+}
+.case-step:last-child { border-bottom: 0; }
+.case-step img {
+  display: block; width: 140px; height: 180px; object-fit: contain;
+  border-radius: 18px; background: #fff; border: 1px solid #f1e5e7;
+}
+.case-copy p { margin: 8px 0; }
+.case-number { margin-top: 0 !important; font-size: 1.2rem; font-weight: 700; }
+.case-quote { font-size: 1.08rem; }
+@media (max-width: 560px) {
+  .case-step { grid-template-columns: 100px minmax(0, 1fr); gap: 13px; padding: 20px 0; }
+  .case-step img { width: 100px; height: 145px; }
+  .case-number { font-size: 1.05rem; }
+  .case-quote { font-size: 1rem; }
+}
